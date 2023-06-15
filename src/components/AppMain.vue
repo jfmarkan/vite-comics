@@ -19,6 +19,7 @@ export default {
     main{
         background-color: $dark-bg;
         height: 100px;
+        padding:$section-padding;
 
         pre{
             color: #FFF;

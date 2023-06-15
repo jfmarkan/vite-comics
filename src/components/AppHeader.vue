@@ -7,7 +7,7 @@
             <div>
                 <nav>
                     <ul>
-                        <li v-for="link in topLinks" :class="active ==='true' ? 'active' : ''">
+                        <li v-for="link in topLinks" :class="link.active ? 'active' : ''">
                             {{link.text}}
                         </li>
                     </ul>
@@ -69,27 +69,30 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @use '../styles/partials/mixins' as *;
     @use '../styles/partials/variables' as *;
 
-    header{
-        height: 90px;
-    }
-
     div.container{
         @include d-flex();
+        padding: calc($section-padding / 2);
 
         ul{
             @include d-flex();
 
             li{
-                margin-left: .5rem;
+                margin-left: 1rem;
+                font-weight: 500;
+                font-size: .8rem;
             }
         }
 
         img{
             width: 70%
         }
+    }
+
+    .active{
+        color: $blue-highlight;
     }
 </style>
