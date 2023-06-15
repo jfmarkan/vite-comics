@@ -2,13 +2,13 @@
     <header>
         <div class="container">
             <div>
-                <img src="" alt="">
+                <img src="../assets/img/dc-logo.png" alt="DC Logo">
             </div>
             <div>
                 <nav>
                     <ul>
-                        <li>
-                            10
+                        <li v-for="link in topLinks" :class="active ==='true' ? 'active' : ''">
+                            {{link.text}}
                         </li>
                     </ul>
                 </nav>
@@ -70,5 +70,26 @@ export default {
 </script>
 
 <style lang="scss">
-    
+    @use '../styles/partials/mixins' as *;
+    @use '../styles/partials/variables' as *;
+
+    header{
+        height: 90px;
+    }
+
+    div.container{
+        @include d-flex();
+
+        ul{
+            @include d-flex();
+
+            li{
+                margin-left: .5rem;
+            }
+        }
+
+        img{
+            width: 70%
+        }
+    }
 </style>
