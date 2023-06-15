@@ -53,28 +53,30 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="action">
-                <button>SIGN-UP NOW!</button>
-            </div>
-            <div class="social-media">
-                <h4>FOLLOW US</h4>
-                <ul>
-                    <li>
-                        <img src="../assets/img/footer-facebook.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/img/footer-twitter.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/img/footer-youtube.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/img/footer-pinterest.png" alt="">
-                    </li>
-                    <li>
-                        <img src="../assets/img/footer-periscope.png" alt="">
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="action">
+                    <button>SIGN-UP NOW!</button>
+                </div>
+                <div class="social-media">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li>
+                            <img src="../assets/img/footer-facebook.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/footer-twitter.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/footer-youtube.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/footer-pinterest.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/footer-periscope.png" alt="">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
@@ -97,9 +99,7 @@ export default {
             @include d-flex();
         
                 .navigation{
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
+                    @include d-flex(column, space-between, center, wrap);
                     height: 300px;
 
                     .footer-col{
@@ -138,5 +138,42 @@ export default {
     .footer-bottom{
         background-color: $grey-bg;
         height: 85px;
+
+        .container{
+            @include d-flex();
+            height: 100%;
+
+            .action{
+
+                button{
+                    border: $blue-bg 2px solid;
+                    color:#FFF;
+                    padding: .5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    background-color: $grey-bg;
+                }
+            }
+
+            .social-media{
+                @include d-flex();
+
+                h4{
+                    font-size: 1.25rem;
+                    color: $blue-bg;
+                }
+
+                ul{
+                    @include d-flex();
+
+                    li{
+                        margin-left:1.25rem;
+                    }
+                }
+            }
+        }
+
+        
+
     }
 </style>
