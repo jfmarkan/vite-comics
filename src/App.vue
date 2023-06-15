@@ -14,13 +14,13 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+
     <AppHeader />
     <AppMain />
     <AppFooter />
-  </div>
+
 </template>
 
-<style scoped>
-
+<style lang="scss">
+  @import './styles/general.scss';
 </style>
