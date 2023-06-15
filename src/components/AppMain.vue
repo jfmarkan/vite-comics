@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <h1>App Main</h1>
-    </div>
+    <main>
+        <div class="container">
+        <pre>--> Content Goes Here </pre>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -10,6 +12,16 @@ export default {
 }
 </script>
 
-<style lang="">
-    
+<style lang="scss" scoped>
+    @use '../styles/partials/mixins' as *;
+    @use '../styles/partials/variables' as *;
+
+    main{
+        background-color: $dark-bg;
+        height: 100px;
+
+        pre{
+            color: #FFF;
+        }
+    }
 </style>
