@@ -3,7 +3,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="navigation">
-                    <nav>
+                    <div class="footer-col">
                         <h4>DC COMICS</h4>
                         <ul>
                             <li>Characters</li>
@@ -19,6 +19,8 @@
                             <li>Shop DC</li>
                             <li>Shop DC Collectibles</li>
                         </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>DC</h4>
                         <ul>
                             <li>Terms Of Use</li>
@@ -33,6 +35,8 @@
                             <li>Shop Help</li>
                             <li>Contact Us</li>
                         </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>SITES</h4>
                         <ul>
                             <li>DC</li>
@@ -41,7 +45,7 @@
                             <li>DC Universe</li>
                             <li>DC Power Visa</li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
                 <div class="logo">
                     
@@ -88,19 +92,45 @@ export default {
 
     .footer-top{
         background-image: url(../assets/img/footer-bg.jpg);
-        height: 300px;
+        height: 350px;
         .container{
             @include d-flex();
         
                 .navigation{
-                    padding: $section-padding;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    height: 300px;
+
+                    .footer-col{
+                        margin: 0 1rem;
+                    }
+
+                    h4{
+                        color: #FFF;
+                        font-size: 1.25rem;
+                        padding: .35rem 0
+                    }
+
+                    ul{
+                        margin: .75rem 0;
+                        color: #959595;
+                        font-size: .8rem;
+                        font-weight: 300;
+
+                        li{
+                            margin: .5rem 0
+                        }
+                    }
                 }
+
                 .logo{
                     background-image: url(../assets/img/dc-logo-bg.png);
+                    background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
-                    height: 300px;
-                    width: 60%;
+                    height: 350px;
+                    width: 39%;
                 }
             }
         }
