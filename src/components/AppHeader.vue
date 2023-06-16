@@ -9,6 +9,7 @@
                     <ul>
                         <li v-for="link in topLinks" :class="link.active ? 'active' : ''">
                             {{link.text}}
+                            <div :class="link.active ? 'highlighted' : ''"></div>
                         </li>
                     </ul>
                 </nav>
@@ -63,9 +64,9 @@ export default {
                     text: 'SHOP',
                     active: false,
                 },
-            ]
+            ],
         }
-    }
+    },
 }
 </script>
 
@@ -75,7 +76,7 @@ export default {
 
     div.container{
         @include d-flex();
-        padding: calc($section-padding / 2);
+        padding: calc($section-padding / 2) 0;
 
         ul{
             @include d-flex();
@@ -84,6 +85,7 @@ export default {
                 margin-left: 1rem;
                 font-weight: 500;
                 font-size: .8rem;
+                position: relative;
             }
         }
 
@@ -91,8 +93,17 @@ export default {
             width: 70%
         }
     }
-
     .active{
         color: $blue-highlight;
+    }
+
+    .highlighted{
+        width: 40px;
+        height: 5px;
+        background-color: $blue-bg;
+        position: absolute;
+        top: 56px;
+        transform: translateX(-50%);
+        left: 50%;
     }
 </style>

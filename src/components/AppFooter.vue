@@ -103,7 +103,7 @@ export default {
                     height: 300px;
 
                     .footer-col{
-                        margin: 0 1rem;
+                        margin-right: 3rem;
                     }
 
                     h4{
