@@ -56,13 +56,15 @@ export default {
 
 
         .container{
-            @include d-flex();
+            @include d-flex(row, center, center, nowrap);
         
         .action{
-            @include d-flex();
+            @include d-flex(row, start, center, wrap);
+            width: calc(100% / 5);
 
             img{
-                width: 50px;
+                max-height: 50px;
+                max-width: 50px;
                 margin: 2rem 1rem;
             }
 

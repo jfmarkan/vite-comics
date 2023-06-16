@@ -3,12 +3,19 @@
         <div class="container">
         <pre>--> Content Goes Here </pre>
         </div>
+        <AppBlueRow />
     </main>
 </template>
 
 <script>
+import AppBlueRow from './AppBlueRow.vue';
+
 export default {
     name: 'AppMain',
+    components:{
+    AppBlueRow,
+    AppBlueRow
+}
 }
 </script>
 
@@ -19,7 +26,7 @@ export default {
     main{
         background-color: $dark-bg;
         height: 100px;
-        padding:$section-padding;
+
 
         pre{
             color: #FFF;
