@@ -39,7 +39,7 @@ export default {
             color: #FFF;
             padding: .5rem 1rem;
             transform: translate(-50%, -50%);
-            top: 0;
+            top: 400px;
             left: 20%;
         }
     }
