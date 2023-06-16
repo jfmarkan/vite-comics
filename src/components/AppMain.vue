@@ -1,21 +1,24 @@
 <template>
     <main>
-        <div class="container">
-        <pre>--> Content Goes Here </pre>
+        <div class="indicator">
+            <h4>CURRENT SERIES</h4>
         </div>
+        <AppProducts />
         <AppBlueRow />
     </main>
 </template>
 
 <script>
 import AppBlueRow from './AppBlueRow.vue';
+import AppProducts from './AppProducts.vue';
 
 export default {
     name: 'AppMain',
     components:{
-    AppBlueRow,
-    AppBlueRow
-}
+        AppBlueRow,
+        AppProducts
+    },
+    
 }
 </script>
 
@@ -25,11 +28,16 @@ export default {
 
     main{
         background-color: $dark-bg;
-        height: 100px;
+        position: relative;
 
-
-        pre{
+        .indicator{
+            background-color: $blue-bg;
+            position: absolute;
             color: #FFF;
+            padding: .5rem 1rem;
+            transform: translate(-50%, -50%);
+            top: 0;
+            left: 250px;
         }
     }
 </style>
