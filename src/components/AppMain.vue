@@ -1,5 +1,6 @@
 <template>
     <main>
+        <AppJumbo />
         <div class="indicator">
             <h4>CURRENT SERIES</h4>
         </div>
@@ -10,14 +11,16 @@
 
 <script>
 import AppBlueRow from './AppBlueRow.vue';
+import AppJumbo from './AppJumbo.vue';
 import AppProducts from './AppProducts.vue';
 
 export default {
     name: 'AppMain',
     components:{
-        AppBlueRow,
-        AppProducts
-    },
+    AppBlueRow,
+    AppProducts,
+    AppJumbo
+},
     
 }
 </script>
@@ -37,7 +40,7 @@ export default {
             padding: .5rem 1rem;
             transform: translate(-50%, -50%);
             top: 0;
-            left: 250px;
+            left: 20%;
         }
     }
 </style>

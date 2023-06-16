@@ -4,6 +4,9 @@
             :comicElement="comic"
         />
     </div>
+    <div class="call-to-action">
+        <button>LOAD MORE</button>
+    </div>
 </template>
 
 <script>
@@ -103,6 +106,19 @@ export default {
     
     div.container{
         @include d-flex
-    }
 
+        
+    }
+    .call-to-action{
+            text-align:center;
+            margin: 2rem 0 1rem;
+
+            button{
+                background-color: $blue-bg;
+                border: none;
+                color: #FFF;
+                font-weight: 600;
+                padding: .5rem 3rem;
+            }
+    }
 </style>
